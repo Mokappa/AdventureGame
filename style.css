@@ -1,0 +1,553 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+
+/* Start with Credit Area */
+.startBackground {
+    background-image: url('./Backgrounds/background1.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#startBackgroundBlack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: black;
+    height: 100vh;
+    width: 100%;
+    z-index: 999;
+    opacity: 0;
+    display: none;
+}
+
+.buttonClass {
+    height: 100px;
+    width: 500px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    letter-spacing: 2px;
+    font-size: 30px;
+    cursor: pointer;
+    margin-top: 100px;
+    box-shadow: 0 0 5px black;
+    transition: all 0.25s;
+}
+
+.buttonClass:hover {
+    color: rgb(206, 206, 206);
+    box-shadow: 0 0 15px rgb(143, 95, 95);
+}
+
+.gameTextArea {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    letter-spacing: 2px;
+    font-size: 30px;
+    cursor: default;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px black;
+    padding-top: 50px;
+    padding-left: 50px;
+    font-weight: bold;
+    align-items: center;
+    flex-direction: column;
+    transition: all 0.2s;
+}
+
+.creditAreaBackground {
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: default;
+    opacity: 0;
+}
+
+.creditAreaText {
+    position: relative;
+    height: 700px;
+    width: 600px;
+    background-color: rgb(48, 48, 48);
+    border-radius: 25px;
+}
+
+.creditAreaText h1 {
+    padding-top: 50px;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+}
+
+.creditAreaText h1:nth-child(2) {
+    margin-top: 50px;
+}
+
+.creditAreaText h {
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    right: 40px;
+    top: 20px;
+    cursor: pointer;
+}
+
+.creditAreaText:before {
+    content: 'Credits';
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 200px;
+    background-color: rgb(34, 34, 34);
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 5px black;
+    letter-spacing: 2px;
+    font-size: 30px;
+    cursor: default;
+    color: white;
+}
+
+
+/* Background Changing */
+#background1 {
+    background-image: url('./Backgrounds/background2.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#background2 {
+    background-image: url('./Backgrounds/background3.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#background3 {
+    background-image: url('./Backgrounds/background4.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#background4 {
+    background-image: url('./Backgrounds/background5.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#background5 {
+    background-image: url('./Backgrounds/background6.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#background6 {
+    background-image: url('./Backgrounds/background7.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#background7 {
+    background-image: url('./Backgrounds/background8.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+}
+
+#DeathBackground {
+    background: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: opacity 1s;
+}
+
+#DeathBackground h1 {
+    color: rgb(160, 14, 14);
+    font-size: 150px;
+    font-family: serif;
+}
+
+#WinningBackground {
+    background: black;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: none;
+    opacity: 0;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+    transition: opacity 1s;
+}
+
+#WinningBackground h1 {
+    color: rgb(19, 160, 14);
+    font-size: 150px;
+    font-family: serif;
+}
+
+
+/* Text Name Input Beginning */
+#inputText {
+    width: 500px;
+    height: 50px;
+    text-align: center;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: opacity 0.25s;
+    opacity: 1;
+}
+
+#inputText::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+
+#buttonStyle {
+    margin-top: 25px;
+    padding: 10px 20px;
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    cursor: pointer;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+#buttonStyle:hover {
+    color: rgba(65, 59, 146, 0.5);
+    box-shadow: 0 0 10px rgba(65, 59, 146, 0.5);
+}
+
+
+/* Game Area Text Typewriter */
+#messageTextArea:after {
+    content: '';
+    border-right: 2px solid black;
+    font-size: 100%;
+    transform: translateY(-50%);
+    animation: blinkTextCursor 500ms infinite normal;
+}
+
+#messageTextArea {
+    display: none;
+}
+
+
+/* Buttons to choose / Choices */
+.buttonsToChoose {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    z-index: 99999;
+}
+
+#buttonToChoose1, #buttonToChoose2, #buttonToChoose3 {
+    height: 150px;
+    width: 200px;
+    background: rgba(65, 59, 146, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    text-align: center;
+    transition: all 0.25s;
+}
+
+#buttonToChoose1, #buttonToChoose2 {
+    margin-right: 200px;
+}
+
+#buttonToChoose1:hover, #buttonToChoose2:hover, #buttonToChoose3:hover {
+    box-shadow: 0 0 30px rgba(69, 54, 133, 0.8);
+}
+
+
+/* Reset Button */
+#resetButton {
+    height: 150px;
+    width: 200px;
+    background: rgba(65, 59, 146, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    transition: all 0.25s;
+}
+
+#resetButton:hover {
+    box-shadow: 0 0 30px rgba(158, 158, 158, 0.5);
+}
+
+#resetButtonWin {
+    height: 150px;
+    width: 200px;
+    background: rgba(65, 59, 146, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+    position: absolute;
+    left: 50%;
+    bottom: 10%;
+    transform: translate(-50%, -50%);
+    transition: all 0.25s;
+}
+
+#resetButtonWin:hover {
+    box-shadow: 0 0 30px rgba(158, 158, 158, 0.5);
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeInBackground {
+    0% {
+        opacity: 0;
+    }
+    
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes blinkTextCursor {
+    from {
+        border-right-color: black;
+    }
+
+    to {
+        border-right-color: transparent;
+    }
+}
+
+
+/* Mobile friendly */
+@media screen and (max-width: 768px) {
+    /* Start with Credit Area */
+    .buttonClass {
+        height: 100px;
+        width: 300px;
+        font-size: 15px;
+        transition: none;
+    }
+
+    .buttonClass:hover {
+        color: white;
+        box-shadow: 0 0 5px black;
+    }
+
+    .gameTextArea {
+        font-size: 20px;
+        padding: 20px 20px;
+        letter-spacing: 0;
+    }
+
+    .creditAreaText {
+        height: 600px;
+        width: 400px;
+    }
+
+    .creditAreaText h1 {
+        font-size: 30px;
+    }
+
+    
+    /* Text Name Input Beginning */
+    #inputText {
+        width: 300px;
+        height: 50px;
+    }
+
+    #buttonStyle {
+        transition: none;
+    }
+
+    #buttonStyle:hover {
+        color: black;
+    }
+
+
+    /* Buttons to choose / Choices */
+    .buttonsToChoose {
+        flex-direction: column;
+    }
+    
+    #buttonToChoose1, #buttonToChoose2, #buttonToChoose3 {
+        height: 100px;
+        width: 150px;
+        font-size: 25px;
+        transition: none;
+        margin-bottom: 25px;
+    }
+
+    #buttonToChoose1, #buttonToChoose2 {
+        margin-right: 0;
+    }
+
+    #buttonToChoose1:hover, #buttonToChoose2:hover, #buttonToChoose3:hover {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+    
+
+    /* Backgrounds */
+    #DeathBackground h1 {
+        font-size: 70px;
+    }
+    
+    #WinningBackground h1 {
+        font-size: 70px;
+    }
+
+
+    /* Reset Button */
+    #resetButton {
+        height: 100px;
+        width: 150px;
+        font-size: 25px;
+        transition: none;
+    }
+
+    #resetButton:hover {
+        box-shadow: none;
+    }
+
+    #resetButtonWin {
+        height: 100px;
+        width: 150px;
+        font-size: 25px;
+        transition: none;
+    }
+
+    #resetButtonWin:hover {
+        box-shadow: none;
+    }
+}
