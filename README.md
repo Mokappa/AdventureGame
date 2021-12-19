@@ -1,1 +1,1 @@
-https://mokappa.github.io/AdventureGame
+https://mokappa.github.io/AdventureGame/
